@@ -6,7 +6,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 const app = express()
 
-const CONNECTION_URL = `mongodb+srv://firstmern:firstmern123@clustor0.maus9.mongodb.net/random?retryWrites=true&w=majority`
+const CONNECTION_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@clustor0.maus9.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`
 const port = process.env.PORT || 3002
 
 // middlewares
